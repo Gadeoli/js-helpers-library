@@ -1,10 +1,9 @@
 export interface getQueryStringParamByNameProps {
-    param: string;
-    url?: string;
+    (param: string, url?: string): any;
 }
 
 export interface secureJSONStringifyProps {
-    object: object
+    (object: object) : string
 }
 
 
