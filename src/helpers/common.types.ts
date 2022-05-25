@@ -1,6 +1,6 @@
 export interface getQueryStringParamByNameProps {
     param: string;
-    url: string;
+    url?: string;
 }
 
 export interface secureJSONStringifyProps {
