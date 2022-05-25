@@ -21,4 +21,3 @@ import {functionName} from '@gadeoli/js-helpers-library';
 ```
 
 ## Sources
--   
