@@ -7,3 +7,6 @@ export {
     getQueryStringParamByName,
     secureJSONStringify
 } from "./common"
+export {
+    handleCssClassnames
+} from "./styles"
