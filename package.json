@@ -10,6 +10,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "prebuild": "rm -rf dist",
+    "publish": "npm run rollup && npm publish",
     "rollup": "npm run prebuild && rollup -c"
   },
   "keywords": [
