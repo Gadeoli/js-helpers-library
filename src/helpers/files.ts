@@ -184,7 +184,13 @@ export const getIntlIdFromErrorCode: getIntlIdFromErrorCodeProps = (code) => {
     } 
 }
 
-export const validateFile: validateFileProps = (file, props) => {
+/**
+ * 
+ * @param file 
+ * @param props  
+ * @returns 
+ */
+export const validateFile: validateFileProps = (file, props: {}) => {
     /*
      * Codes
      * 1000 - Success
@@ -193,6 +199,33 @@ export const validateFile: validateFileProps = (file, props) => {
      * 1003 - File not found
      * 1004 - Undefined
      */
+
+    /*
+        //How props should looks like
+        //is necessary put that in const props (but i dont know how now, sorry!!)
+
+        export const defaultImageLimits = (limits = {}) => {
+            const {limit = 5, mimes = ''} = limits 
+            const maxSize = 5 * 1024 * 1024 //limit is a mb helper size
+            const mimesAllowed = mimes || 'image/x-png,image/png,image/jpeg'
+
+            return {
+                type: 'images',
+                src: null,
+                ext: null,
+                size: null,
+                maxSize: maxSize,
+                maxSizeMB: limit,
+                multiple: false,
+                amount: 1,
+                accept: mimesAllowed,
+                validations: {
+                    size: `Arquivo muito grande. ${limit}MB são o máximo permitido`,
+                    type: `Esse tipo de arquivo não é permitido. Os tipos permitidos estão listados nos seguintes mimes: ${mimesAllowed}`,
+                },
+            }
+        }
+    */
 
     const validation : ({code: number | null; message: string}) = {
         code: null,
@@ -377,3 +410,4 @@ export const binaryToOctet: binaryToOctetProps = (bin) => {
     for (let i=0; i<bin.length; i++) view[i] = bin.charCodeAt(i) & 0xFF; //convert to octet
     return buf;
 } 
+
