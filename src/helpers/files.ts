@@ -244,7 +244,7 @@ export const validateFile: validateFileProps = (file, props: {}) => {
             //validate size
             if(currentSize > props.maxSize){
                 validation.code = 1001;
-                throw new Error('Too big');
+                throw new Error(props.validations?.size || 'Too big');
             }
 
             //validate type
@@ -257,7 +257,7 @@ export const validateFile: validateFileProps = (file, props: {}) => {
     
             if(!acceptArray.includes(currentType)){
                 validation.code = 1002;
-                throw new Error('Invalid type: '+currentType);
+                throw new Error(props.validations?.type || 'Invalid type: '+currentType);
             }
     
             validation.code = 1000;    
