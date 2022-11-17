@@ -14,7 +14,8 @@ import {
     exportToCsvProps,
     saveFileProps,
     getNewSizesFromImgSrcProps,
-    binaryToOctetProps
+    binaryToOctetProps,
+    readFileURLProps
 } from './files.types';
 
 /**
@@ -411,3 +412,16 @@ export const binaryToOctet: binaryToOctetProps = (bin) => {
     return buf;
 } 
 
+export const readFileURL : readFileURLProps = (file) =>{
+    return new Promise((resolve, reject) => {
+        const fr = new FileReader();  
+        
+        fr.onload = () => {
+            resolve(fr.result);
+        };
+
+        fr.onerror = reject;
+        
+        fr.readAsDataURL(file);
+    });
+}

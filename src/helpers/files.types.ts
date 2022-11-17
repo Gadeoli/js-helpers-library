@@ -62,3 +62,7 @@ export interface binaryToOctetProps {
     (bin: any): any;
 }
 
+export interface readFileURLProps {
+    (file: any): any;
+}
+

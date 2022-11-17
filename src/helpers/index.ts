@@ -26,7 +26,8 @@ export {
     exportToCsv,
     saveFile,
     getNewSizesFromImgSrc,
-    binaryToOctet
+    binaryToOctet,
+    readFileURL
 } from "./files";
 export {
     getBase64FromResponse
