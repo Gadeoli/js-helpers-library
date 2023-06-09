@@ -1,4 +1,4 @@
-# RJS Hook Library
+# JS-mix-functions
 
 Some simple JS functions in one place
 
