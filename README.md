@@ -9,6 +9,7 @@ Some simple JS functions in one place
   - getQueryStringParamByName (simple extract param from a given url - default url is used if none passed)  
   - justNumbersAndLetters  
   - reorderArrayItem  (reorder an array item moving all the others)  
+  - replaceManyStr  
   - searchManyInArray (check if a item of array B belongs to array A, no object itens supported)  
   - secureJSONStringify (secure stringify - avoid undefined errors)  
 

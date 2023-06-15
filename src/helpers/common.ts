@@ -3,11 +3,12 @@ import {
     getQueryStringParamByNameProps,
     justNumbersAndLettersProps,
     reorderArrayItemProps,
+    replaceManyStrProps,
     searchManyInArrayProps,
     secureJSONStringifyProps
 } from './common.types';
 
-export const copyToClipboard : copyToClipboardProps = (text) => {
+export const copyToClipboard : copyToClipboardProps = (text, timeout=500) => {
     if (window.isSecureContext && navigator.clipboard) { //ssl
         navigator.clipboard.writeText(text);
     } else { //no ssl
@@ -19,7 +20,7 @@ export const copyToClipboard : copyToClipboardProps = (text) => {
         elem.value = text;
         elem.zIndex = 100000000000000;
 
-        //useTimeout is used to prevent tooltip reender && forced it to close before user read it. 
+        //useTimeout is used to prevent tooltip reender (external component) && forced it to close before user read it. 
         //don't use more then .5s to avoid user get blur before copy finish
         setTimeout(() => {  
             document.body.appendChild(elem);
@@ -33,7 +34,7 @@ export const copyToClipboard : copyToClipboardProps = (text) => {
             } finally {
                 elem.remove();
             }
-        }, 500);
+        }, timeout);
     }
 }
 
@@ -60,6 +61,16 @@ export const justNumbersAndLetters : justNumbersAndLettersProps = (str) => str.r
 export const reorderArrayItem : reorderArrayItemProps = (from, to, data) => {
     data.splice(to, 0, data.splice(from, 1)[0]);
 }
+
+/**
+ * Replace multiple values from a string using a key => value object
+ * @param [] data [{search: 'xpto', replacer: 'xpto2'}, {search: 'Earth', replace: 'Moon'}]
+ * @param string sentence 
+ * @returns 
+ */
+export const replaceManyStr : replaceManyStrProps = (data, sentence) => data.reduce((newSentence:string, v:{search: string, replacer: string}) => {
+    return newSentence.replace(v.search, v.replacer);
+}, sentence);
 
 /**
  * Check if any item of single level, no object itens Array 'B' is inside from single level, no object itens Array 'A'

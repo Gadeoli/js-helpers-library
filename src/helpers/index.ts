@@ -8,6 +8,7 @@ export {
     getQueryStringParamByName,
     justNumbersAndLetters,
     reorderArrayItem,
+    replaceManyStr,
     searchManyInArray, 
     secureJSONStringify
 } from "./common";
