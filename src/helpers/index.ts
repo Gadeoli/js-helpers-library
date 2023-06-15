@@ -4,7 +4,11 @@ export {
     addInMinutes 
 } from "./time";
 export {
+    copyToClipboard,
     getQueryStringParamByName,
+    justNumbersAndLetters,
+    reorderArrayItem,
+    searchManyInArray, 
     secureJSONStringify
 } from "./common";
 export {
