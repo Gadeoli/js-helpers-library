@@ -100,7 +100,7 @@ export const extractFileExtentionFromBase64 : extractFileExtentionFromBase64Prop
 
 //Get filename from a content disposition response
 export const extractFileNameFromDisposition : extractFileNameFromDispositionProps = (str) => {
-    return str.substring(str.indexOf("filename=")+9); 
+    return str.substring(str.indexOf("filename=")+9).replace("\"", ''); 
 }
 
 export const getExtensionByMimeType : getExtensionByMimeTypeProps = (mime) => {
