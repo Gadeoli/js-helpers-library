@@ -50,5 +50,14 @@ Some simple JS functions in one place
 import {functionName} from '@gadeoli/js-helpers-library';
 ```
 
+## How to maintain
+
+1. Clone  
+2. NVM use 22.13.1 (node 22.13.1 / npm 10.9.2)  
+3. npm i  
+4. make changes  
+5. git add / git commit / git push  
+6. npm run publish (custom command)  
+
 ## Sources
 - None source informed, but most of the functions come from (or are based from) online foruns (stackoverflow and others)
