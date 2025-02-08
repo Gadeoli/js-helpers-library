@@ -17,14 +17,12 @@ const onlyPath = (filePath) => {
 export default [
     {
         input: 'src/index.ts',
-        output: [
-            {
-                file: packageJson.main,
-                format: 'cjs',
-                sourcemap: !production,
-                name: 'react-ts-lib'
-            }
-        ],
+        output: {
+            file: packageJson.main,
+            format: 'cjs',
+            sourcemap: !production,
+            name: 'react-ts-lib'
+        },
         plugins: [
             external(),
             nodeResolve({ preferBuiltins: false, mainFields: ['browser'] }),
@@ -39,13 +37,11 @@ export default [
     },
     {
         input: 'src/index.ts',
-        output: [
-            {
-                file: packageJson.module,
-                format: 'esm',
-                sourcemap: !production
-            }
-        ],
+        output: {
+            file: packageJson.module,
+            format: 'esm',
+            sourcemap: !production
+        },
         plugins: [
             external(),
             nodeResolve({ preferBuiltins: false, mainFields: ['browser'] }),
