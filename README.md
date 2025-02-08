@@ -51,3 +51,4 @@ import {functionName} from '@gadeoli/js-helpers-library';
 ```
 
 ## Sources
+- None source informed, but most of the functions come from (or are based from) online foruns (stackoverflow and others)
