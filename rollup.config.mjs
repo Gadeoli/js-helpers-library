@@ -32,7 +32,7 @@ export default [
             typescript({ 
                 tsconfig: './tsconfig.json',
                 sourceMap: !production,
-                declarationDir: `${onlyPath(packageJson.main)}/types`,
+                declarationDir: `${onlyPath(packageJson.main)}/types`
             }),
             terser()
         ]
@@ -53,7 +53,7 @@ export default [
             typescript({ 
                 tsconfig: './tsconfig.json',
                 sourceMap: !production,
-                declarationDir: `${onlyPath(packageJson.module)}/types`,
+                declarationDir: `${onlyPath(packageJson.module)}/types`
             }),
             terser()
         ]
