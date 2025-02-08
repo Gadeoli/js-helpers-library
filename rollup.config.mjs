@@ -1,9 +1,9 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs     from '@rollup/plugin-commonjs';
-import typescript   from '@rollup/plugin-typescript';
+import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
-import external     from 'rollup-plugin-peer-deps-external';
-import dts          from 'rollup-plugin-dts';
+import external from 'rollup-plugin-peer-deps-external';
+import dts from 'rollup-plugin-dts';
 import packageJson from "./package.json" with { type: "json" };
 
 const production = !process.env.ROLLUP_WATCH;
@@ -32,7 +32,7 @@ export default [
             typescript({ 
                 tsconfig: './tsconfig.json',
                 sourceMap: !production,
-                "declarationDir": `${onlyPath(packageJson.main)}/types`,
+                declarationDir: `${onlyPath(packageJson.main)}/types`,
             }),
             terser()
         ]
@@ -53,7 +53,7 @@ export default [
             typescript({ 
                 tsconfig: './tsconfig.json',
                 sourceMap: !production,
-                "declarationDir": `${onlyPath(packageJson.module)}/types`,
+                declarationDir: `${onlyPath(packageJson.module)}/types`,
             }),
             terser()
         ]
