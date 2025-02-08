@@ -10,7 +10,7 @@
         //added
         "module": "esnext",
         "declaration": true,
-        //seted inside rollup config
+        //setted inside rollup config
         // "declarationDir": "types",
         "sourceMap": true,
         "outDir": "dist",
