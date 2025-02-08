@@ -39,7 +39,19 @@ export interface getIntlIdFromErrorCodeProps {
 }
 
 export interface validateFileProps {
-    (file: any, props: any): any;
+    (file: any, props: validateFileExtraProps): any;
+}
+
+export interface validateFileExtraProps {
+    validations: validateFileExtraValidationProps;
+    accept: string;
+    maxSize: number;
+    
+}
+
+export interface validateFileExtraValidationProps {
+    size: string;
+    type: string;
 }
 
 export interface resizeImgFromBase64Props {

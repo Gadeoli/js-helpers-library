@@ -14,11 +14,11 @@ export const copyToClipboard : copyToClipboardProps = (text, timeout=500) => {
     } else { //no ssl
         const elem = document.createElement("input");
         elem.style.position = 'fixed';
-        elem.style.top = 0;
-        elem.style.left = 0;
-        elem.style.opacity = 0;
+        elem.style.top = '0';
+        elem.style.left = '0';
+        elem.style.opacity = '0';
         elem.value = text;
-        elem.zIndex = 100000000000000;
+        elem.style.zIndex = '100000000000000';
 
         //useTimeout is used to prevent tooltip reender (external component) && forced it to close before user read it. 
         //don't use more then .5s to avoid user get blur before copy finish

@@ -10,7 +10,8 @@
         //added
         "module": "esnext",
         "declaration": true,
-        "declarationDir": "types",
+        //seted inside rollup config
+        // "declarationDir": "types",
         "sourceMap": true,
         "outDir": "dist",
         "moduleResolution": "node",

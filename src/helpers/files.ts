@@ -191,7 +191,7 @@ export const getIntlIdFromErrorCode: getIntlIdFromErrorCodeProps = (code) => {
  * @param props  
  * @returns 
  */
-export const validateFile: validateFileProps = (file, props: {}) => {
+export const validateFile: validateFileProps = (file, props) => {
     /*
      * Codes
      * 1000 - Success
