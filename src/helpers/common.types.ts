@@ -29,3 +29,7 @@ export interface searchManyInArrayProps {
 export interface replaceManyStrProps {
     (data: Array<{search: string, replacer: string}>, sentence: string) : string;
 }
+
+export interface isEqualProps {
+    (obj1: any, obj2: any) : boolean;
+}
