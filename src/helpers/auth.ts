@@ -1,4 +1,4 @@
-import { DecodeJwtPayloadProps } from "./auth.types";
+import { DecodeJwtPayloadProps, RemainingSecsProps } from "./auth.types";
 
 export const decodeJwtPayload : DecodeJwtPayloadProps = (token) => {
     try {
@@ -19,4 +19,12 @@ export const decodeJwtPayload : DecodeJwtPayloadProps = (token) => {
         console.error('Invalid token:', error);
         return null;
     }
+}
+
+export const remainingSecs : RemainingSecsProps = (payload) => {
+    if(!payload || !payload.exp) return 0;
+
+    const now = Math.floor(Date.now() / 1000);
+    
+    return payload.exp - now;
 }

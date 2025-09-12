@@ -1,5 +1,6 @@
 export {
-    decodeJwtPayload
+    decodeJwtPayload,
+    remainingSecs
 } from "./auth";
 export { 
     diffInMinutes, 
