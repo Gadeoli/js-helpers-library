@@ -7,6 +7,7 @@ export {
 export {
     copyToClipboard,
     getQueryStringParamByName,
+    isEqual,
     justNumbersAndLetters,
     reorderArrayItem,
     replaceManyStr,
