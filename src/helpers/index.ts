@@ -1,7 +1,8 @@
 export { 
     diffInMinutes, 
     diffInSeconds, 
-    addInMinutes 
+    addInMinutes,
+    localTimezoneToDateStr
 } from "./time";
 export {
     copyToClipboard,

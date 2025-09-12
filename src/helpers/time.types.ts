@@ -10,5 +10,7 @@ export interface addInMinutesProps {
     (dt: Date, minutes: number) : Date;
 }
 
-
+export interface applyLocalTimezoneProps {
+    (dateStr : string) : string
+}
 
